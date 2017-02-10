@@ -13,6 +13,9 @@
 
 @interface PartyCreatorViewController () <UITextViewDelegate, UITextFieldDelegate, UIScrollViewDelegate>
 
+
+
+
 @property UIView *mainView;
 @property UISlider *sliderUp;
 @property UISlider *sliderDown;
@@ -153,6 +156,7 @@
     //PAGE CONTROL VIEW
     [self.mainView addSubview:[self getPageControlView]];
     
+    //DESCRIPTION VIEW
     [self.mainView addSubview:[self getDescriptionView]];
     
     //Add button save

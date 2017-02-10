@@ -7,10 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "PartyCreatorViewController.h"
+#import "XibViewController.h"
 #import "UIColor+Utilty.h"
 
 @interface ViewController ()
+
+//@property (atomic, strong) XibViewController* xibViewController;
 
 @end
 
@@ -21,24 +23,23 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     self.title = @"Home";
     self.view.backgroundColor = [UIColor viewBackgroundColor];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    self.title = @"Home";
-    self.view.backgroundColor = [UIColor viewBackgroundColor];
+    [super viewDidAppear:animated];
     
     UIBarButtonItem *buttonCreateParty = [[UIBarButtonItem alloc] initWithTitle:@"Create Party" style:UIBarButtonItemStylePlain target:self action:@selector(CreateParty)];
     self.navigationItem.rightBarButtonItem = buttonCreateParty;
 }
 
 - (void)CreateParty {
-    PartyCreatorViewController *partyCreatorVC = [[PartyCreatorViewController alloc] init];
-    partyCreatorVC.view = [[UIView alloc] initWithFrame:self.view.frame];
+    XibViewController *xibViewController = [[XibViewController alloc] initWithNibName:@"XibViewController" bundle:nil];
     
-    [self.navigationController pushViewController:partyCreatorVC animated:YES];
+    [self.navigationController pushViewController:xibViewController animated:YES];
 }
      
 - (void)didReceiveMemoryWarning {
