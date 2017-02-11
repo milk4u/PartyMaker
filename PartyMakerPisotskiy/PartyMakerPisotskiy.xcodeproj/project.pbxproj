@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B279565E1E48C1B400CC64D7 /* PartyCreatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B279565D1E48C1B400CC64D7 /* PartyCreatorViewController.m */; };
+		B268E64D1E4E8230006E1328 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = B268E64B1E4E8230006E1328 /* gear.png */; };
+		B268E64E1E4E8230006E1328 /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B268E64C1E4E8230006E1328 /* menu-icon.png */; };
 		B29107F21E4B100B009238C1 /* Coconut Cocktail.png in Resources */ = {isa = PBXBuildFile; fileRef = B29107EB1E4B100B009238C1 /* Coconut Cocktail.png */; };
 		B29107F31E4B100B009238C1 /* No Alcohol.png in Resources */ = {isa = PBXBuildFile; fileRef = B29107EC1E4B100B009238C1 /* No Alcohol.png */; };
 		B29107F41E4B100B009238C1 /* Birthday Cake.png in Resources */ = {isa = PBXBuildFile; fileRef = B29107ED1E4B100B009238C1 /* Birthday Cake.png */; };
@@ -16,11 +17,9 @@
 		B29107F71E4B100B009238C1 /* leftSliderImg.png in Resources */ = {isa = PBXBuildFile; fileRef = B29107F01E4B100B009238C1 /* leftSliderImg.png */; };
 		B29107F81E4B100B009238C1 /* rightSliderImg.png in Resources */ = {isa = PBXBuildFile; fileRef = B29107F11E4B100B009238C1 /* rightSliderImg.png */; };
 		B29107FA1E4B103B009238C1 /* Beer.png in Resources */ = {isa = PBXBuildFile; fileRef = B29107F91E4B103B009238C1 /* Beer.png */; };
-		B291082A1E4BBD56009238C1 /* XibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B29108291E4BBD56009238C1 /* XibViewController.xib */; };
 		B29108591E4C7C14009238C1 /* XibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29108581E4C7C14009238C1 /* XibViewController.m */; };
 		B2D29BE61E409CD900A999EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D29BE51E409CD900A999EA /* main.m */; };
 		B2D29BE91E409CD900A999EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D29BE81E409CD900A999EA /* AppDelegate.m */; };
-		B2D29BEC1E409CD900A999EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D29BEB1E409CD900A999EA /* ViewController.m */; };
 		B2D29BEF1E409CD900A999EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D29BED1E409CD900A999EA /* Main.storyboard */; };
 		B2D29BF11E409CD900A999EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2D29BF01E409CD900A999EA /* Assets.xcassets */; };
 		B2D29BF41E409CD900A999EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D29BF21E409CD900A999EA /* LaunchScreen.storyboard */; };
@@ -28,8 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B279565C1E48C1B400CC64D7 /* PartyCreatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PartyCreatorViewController.h; path = ../PartyCreatorViewController.h; sourceTree = "<group>"; };
-		B279565D1E48C1B400CC64D7 /* PartyCreatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PartyCreatorViewController.m; path = ../PartyCreatorViewController.m; sourceTree = "<group>"; };
+		B268E64B1E4E8230006E1328 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+		B268E64C1E4E8230006E1328 /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
 		B29107EB1E4B100B009238C1 /* Coconut Cocktail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Coconut Cocktail.png"; path = "../../../Downloads/images/Coconut Cocktail.png"; sourceTree = "<group>"; };
 		B29107EC1E4B100B009238C1 /* No Alcohol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "No Alcohol.png"; path = "../../../Downloads/images/No Alcohol.png"; sourceTree = "<group>"; };
 		B29107ED1E4B100B009238C1 /* Birthday Cake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Birthday Cake.png"; path = "../../../Downloads/images/Birthday Cake.png"; sourceTree = "<group>"; };
@@ -38,15 +37,12 @@
 		B29107F01E4B100B009238C1 /* leftSliderImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leftSliderImg.png; path = ../../../Downloads/images/leftSliderImg.png; sourceTree = "<group>"; };
 		B29107F11E4B100B009238C1 /* rightSliderImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rightSliderImg.png; path = ../../../Downloads/images/rightSliderImg.png; sourceTree = "<group>"; };
 		B29107F91E4B103B009238C1 /* Beer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Beer.png; path = ../../../Downloads/Beer.png; sourceTree = "<group>"; };
-		B29108291E4BBD56009238C1 /* XibViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XibViewController.xib; path = ../XibViewController.xib; sourceTree = "<group>"; };
 		B29108571E4C7C14009238C1 /* XibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XibViewController.h; path = ../XibViewController.h; sourceTree = "<group>"; };
 		B29108581E4C7C14009238C1 /* XibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XibViewController.m; path = ../XibViewController.m; sourceTree = "<group>"; };
 		B2D29BE11E409CD900A999EA /* PartyMakerPisotskiy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyMakerPisotskiy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D29BE51E409CD900A999EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2D29BE71E409CD900A999EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B2D29BE81E409CD900A999EA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B2D29BEA1E409CD900A999EA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B2D29BEB1E409CD900A999EA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B2D29BEE1E409CD900A999EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2D29BF01E409CD900A999EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2D29BF31E409CD900A999EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,16 +62,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B268E6491E4C804D006E1328 /* Xib */ = {
-			isa = PBXGroup;
-			children = (
-				B29108291E4BBD56009238C1 /* XibViewController.xib */,
-				B29108581E4C7C14009238C1 /* XibViewController.m */,
-				B29108571E4C7C14009238C1 /* XibViewController.h */,
-			);
-			name = Xib;
-			sourceTree = "<group>";
-		};
 		B268E64A1E4DDB6F006E1328 /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +70,8 @@
 				B29107ED1E4B100B009238C1 /* Birthday Cake.png */,
 				B29107EE1E4B100B009238C1 /* Christmas Tree.png */,
 				B29107F91E4B103B009238C1 /* Beer.png */,
+				B268E64B1E4E8230006E1328 /* gear.png */,
+				B268E64C1E4E8230006E1328 /* menu-icon.png */,
 				B29107EF1E4B100B009238C1 /* Champagne.png */,
 				B29107F01E4B100B009238C1 /* leftSliderImg.png */,
 				B29107F11E4B100B009238C1 /* rightSliderImg.png */,
@@ -111,13 +99,10 @@
 		B2D29BE31E409CD900A999EA /* PartyMakerPisotskiy */ = {
 			isa = PBXGroup;
 			children = (
-				B268E6491E4C804D006E1328 /* Xib */,
-				B279565C1E48C1B400CC64D7 /* PartyCreatorViewController.h */,
-				B279565D1E48C1B400CC64D7 /* PartyCreatorViewController.m */,
 				B2D29BE71E409CD900A999EA /* AppDelegate.h */,
 				B2D29BE81E409CD900A999EA /* AppDelegate.m */,
-				B2D29BEA1E409CD900A999EA /* ViewController.h */,
-				B2D29BEB1E409CD900A999EA /* ViewController.m */,
+				B29108581E4C7C14009238C1 /* XibViewController.m */,
+				B29108571E4C7C14009238C1 /* XibViewController.h */,
 				B2D29BED1E409CD900A999EA /* Main.storyboard */,
 				B2D29BF01E409CD900A999EA /* Assets.xcassets */,
 				B2D29BF21E409CD900A999EA /* LaunchScreen.storyboard */,
@@ -200,11 +185,12 @@
 				B29107FA1E4B103B009238C1 /* Beer.png in Resources */,
 				B29107F61E4B100B009238C1 /* Champagne.png in Resources */,
 				B29107F81E4B100B009238C1 /* rightSliderImg.png in Resources */,
+				B268E64E1E4E8230006E1328 /* menu-icon.png in Resources */,
+				B268E64D1E4E8230006E1328 /* gear.png in Resources */,
 				B29107F21E4B100B009238C1 /* Coconut Cocktail.png in Resources */,
 				B29107F51E4B100B009238C1 /* Christmas Tree.png in Resources */,
 				B2D29BF11E409CD900A999EA /* Assets.xcassets in Resources */,
 				B2D29BEF1E409CD900A999EA /* Main.storyboard in Resources */,
-				B291082A1E4BBD56009238C1 /* XibViewController.xib in Resources */,
 				B29107F31E4B100B009238C1 /* No Alcohol.png in Resources */,
 				B29107F41E4B100B009238C1 /* Birthday Cake.png in Resources */,
 				B29107F71E4B100B009238C1 /* leftSliderImg.png in Resources */,
@@ -218,10 +204,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2D29BEC1E409CD900A999EA /* ViewController.m in Sources */,
 				B2D29BE91E409CD900A999EA /* AppDelegate.m in Sources */,
 				B29108591E4C7C14009238C1 /* XibViewController.m in Sources */,
-				B279565E1E48C1B400CC64D7 /* PartyCreatorViewController.m in Sources */,
 				B2D29BE61E409CD900A999EA /* main.m in Sources */,
 				B2D29C001E410C6200A999EA /* UIColor+Utilty.m in Sources */,
 			);

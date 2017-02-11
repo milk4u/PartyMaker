@@ -6,15 +6,12 @@
 //  Copyright © 2017 Intern01. All rights reserved.
 //
 
-#import "ViewController.h"
 #import "UIColor+Utilty.h"
 #import "XibViewController.h"
 
 @interface XibViewController () <UITextFieldDelegate, UIScrollViewDelegate, UITextViewDelegate>
 //buttonUI
 @property (weak, nonatomic) IBOutlet UIButton* buttonChooseDay;
-@property (weak, nonatomic) IBOutlet UIButton* buttonCancel;
-@property (weak, nonatomic) IBOutlet UIButton* buttonSave;
 
 //sliderUI
 @property (weak, nonatomic) IBOutlet UISlider* sliderStart;
@@ -49,14 +46,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-
     self.title = @"Create Party";
     self.navigationItem.hidesBackButton = YES;
     
@@ -64,6 +54,13 @@
     [self setUpTextField];
     [self setUpScrollView];
     [self setUpTextView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -102,19 +99,19 @@
 - (IBAction)onButtonChooseDayTap:(UIButton*)sender {
     self.datePickerView.hidden = NO;
     [UIView animateWithDuration:0.3f animations:^{
-        self.datePickerView.frame = (CGRect){0, 348, self.datePickerView.frame.size.width, self.datePickerView.frame.size.height};
+        self.datePickerView.frame = (CGRect){0, 295, self.datePickerView.frame.size.width, self.datePickerView.frame.size.height};
     }];
     [self moveFocusCircleOnY:27.6];
 }
 
-- (IBAction)onChooseDayToolbarCancelTap:(UIBarButtonItem*)sender {
+- (IBAction)onChooseDayToolbarCancelTap:(id)sender {
     [UIView animateWithDuration:0.3f animations:^{
         self.datePickerView.frame = (CGRect){0, 570, self.datePickerView.frame.size.width, self.datePickerView.frame.size.height};
     self.datePickerView.hidden = YES;
     }];
 }
 
-- (IBAction)onChoodeDayToolbarDoneTap:(UIBarButtonItem*)sender {
+- (IBAction)onChoodeDayToolbarDoneTap:(id)sender {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd.MM.yyyy"];
     
@@ -185,18 +182,19 @@
     return YES;
 }
 
--(BOOL)textViewShouldEndEditing:(UITextView *)textView {
+- (BOOL)textViewShouldEndEditing:(UITextView *)textView {
     [textView resignFirstResponder];
     return YES;
 }
 
-- (IBAction)onButtonSaveTap:(UIButton*)sender {
+- (IBAction)onSaveItemTap:(id)sender {
     [self checkIfAllRequiredFieldsEntered];
 }
 
-- (IBAction)onButtonCanceltap:(UIButton*)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
-    //[self moveFocusCircleOnY:477];
+- (IBAction)onCancelItemTap:(id)sender {
+    [self loadView];
+    [self viewDidLoad];
+    //[self viewWillAppear:NO];
 }
 
 - (void)keyboardWillShow:(NSNotification*)notification {

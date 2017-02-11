@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "UIColor+Utilty.h"
-#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,25 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-   
-    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor logoBackColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
-    ViewController *viewController = [[ViewController alloc] init];
-    viewController.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    [navigationController.navigationBar setTintColor:[UIColor blackColor]];
-    [navigationController.navigationBar setBarTintColor:[UIColor logoBackColor]];
-    [navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    
-    
-    window.rootViewController = navigationController;
-    self.window = window;
-    
-    [self.window makeKeyAndVisible];
     
     return YES;
+
 }
 
 
