@@ -1,15 +1,16 @@
 //
-//  XibViewController.m
+//  CreatePartyViwController.m
 //  PartyMakerPisotskiy
 //
 //  Created by Intern01 on 2/9/17.
 //  Copyright © 2017 Intern01. All rights reserved.
 //
 
-#import "UIColor+Utilty.h"
-#import "XibViewController.h"
+#import "UIColor+CustomColors.h"
+#import "CreatePartyViewController.h"
+#import "Party.h"
 
-@interface XibViewController () <UITextFieldDelegate, UIScrollViewDelegate, UITextViewDelegate>
+@interface CreatePartyViwController () <UITextFieldDelegate, UIScrollViewDelegate, UITextViewDelegate>
 //buttonUI
 @property (weak, nonatomic) IBOutlet UIButton* buttonChooseDay;
 
@@ -42,7 +43,7 @@
 
 @end
 
-@implementation XibViewController
+@implementation CreatePartyViwController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -81,6 +82,8 @@
     self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
 }
 
+//need addmore code for this
+#warning Make Scroll View Pretty AGAIN !!!
 - (void)setUpScrollView {
     self.scrollView.contentSize = (CGSize) {self.scrollView.frame.size.width * 6, self.scrollView.frame.size.height};
 }
@@ -99,14 +102,14 @@
 - (IBAction)onButtonChooseDayTap:(UIButton*)sender {
     self.datePickerView.hidden = NO;
     [UIView animateWithDuration:0.3f animations:^{
-        self.datePickerView.frame = (CGRect){0, 295, self.datePickerView.frame.size.width, self.datePickerView.frame.size.height};
+        self.datePickerView.frame = (CGRect){0, self.view.frame.size.height - self.datePickerView.frame.size.height, self.datePickerView.frame.size.width, self.datePickerView.frame.size.height};
     }];
-    [self moveFocusCircleOnY:27.6];
+    [self moveFocusCircleOnOyPosition:sender.center.y];
 }
 
 - (IBAction)onChooseDayToolbarCancelTap:(id)sender {
     [UIView animateWithDuration:0.3f animations:^{
-        self.datePickerView.frame = (CGRect){0, 570, self.datePickerView.frame.size.width, self.datePickerView.frame.size.height};
+        self.datePickerView.frame = (CGRect){0, self.view.frame.size.height, self.datePickerView.frame.size.width, self.datePickerView.frame.size.height};
     self.datePickerView.hidden = YES;
     }];
 }
@@ -128,7 +131,7 @@
         self.labelEnd.text = [self getTimeStringFromSliderValue:self.sliderEnd.value];
     }
     self.labelStart.text = [self getTimeStringFromSliderValue:sender.value];
-    [self moveFocusCircleOnY:122];
+    [self moveFocusCircleOnOyPosition:sender.superview.center.y];
 }
 
 - (IBAction)onSliderEndValueChanged:(UISlider*)sender {
@@ -137,17 +140,20 @@
         self.labelStart.text = [self getTimeStringFromSliderValue:self.sliderStart.value];
     }
     self.labelEnd.text = [self getTimeStringFromSliderValue:sender.value];
-    [self moveFocusCircleOnY:163];
+    [self moveFocusCircleOnOyPosition:sender.superview.center.y];
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    [self moveFocusCircleOnY:76];
+    [self moveFocusCircleOnOyPosition:textField.center.y];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     
-    self.isNamePicked = YES;
+    self.isNamePicked = NO;
+    if (![textField.text  isEqual: @""]) {
+        self.isNamePicked = YES;
+    }
     return YES;
 }
 
@@ -155,14 +161,14 @@
     CGPoint contentOffset = CGPointMake(self.pageControl.currentPage * self.scrollView.frame.size.width, 0);
     [self.scrollView setContentOffset:contentOffset animated:YES];
 
-    [self moveFocusCircleOnY:244];
+    [self moveFocusCircleOnOyPosition:sender.superview.center.y];
 }
 
 - (void) scrollViewDidEndDecelerating: (UIScrollView*) scrollView {
     NSInteger currentPage = scrollView.contentOffset.x / self.scrollView.frame.size.width;
     [self.pageControl setCurrentPage:currentPage];
     
-    [self moveFocusCircleOnY:244];
+    [self moveFocusCircleOnOyPosition:scrollView.superview.center.y];
 }
 
 - (IBAction)onDescriptionViewToolbarCancel:(id)sender {
@@ -177,7 +183,7 @@
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
     self.previousDescriptionValue = self.textView.text;
-    [self moveFocusCircleOnY:358];
+    [self moveFocusCircleOnOyPosition:textView.superview.center.y];
     
     return YES;
 }
@@ -188,12 +194,11 @@
 }
 
 - (IBAction)onSaveItemTap:(id)sender {
-    [self checkIfAllRequiredFieldsEntered];
+    [self isAllRequiredFieldsEntered];
 }
 
 - (IBAction)onCancelItemTap:(id)sender {
-    [self loadView];
-    [self viewDidLoad];
+    [self.navigationController popToRootViewControllerAnimated:YES];
     //[self viewWillAppear:NO];
 }
 
@@ -202,7 +207,7 @@
         CGRect keyboardRect = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
         float duration = [[[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
         
-        __block __weak XibViewController *weakSelf = self;
+        __block __weak CreatePartyViwController *weakSelf = self;
         [UIView animateWithDuration:duration animations:^{
             CGRect viewFrame = weakSelf.view.frame;
             viewFrame.origin.y -= keyboardRect.size.height;
@@ -214,7 +219,7 @@
 -(void)keyboardWillHide:(NSNotification*)notification {
     float duration = [[[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
     
-    __block __weak XibViewController *weakSelf = self;
+    __block __weak CreatePartyViwController *weakSelf = self;
     [UIView animateWithDuration:duration animations:^{
         CGRect viewFrame = weakSelf.view.frame;
         viewFrame.origin.y = 0;
@@ -224,6 +229,17 @@
 
 //tools
 
+- (void)saveThePartyToUserDefaults {
+    NSMutableArray *listOfPartyes = [Party deserializePartyList];
+        
+    Party *myParty = [[Party alloc] initPartyWithName:self.textField.text date:self.datePicker.date timeOfStart:self.labelStart.text timeOfEnd:self.labelEnd.text logoNumber:self.pageControl.currentPage andDescription:self.textView.text];
+        
+    [listOfPartyes addObject:myParty];
+    [Party serializePartyList:listOfPartyes];
+        
+    //[self performSegueWithIdentifier:@"segueToPartyList" sender:self];
+}
+
 - (NSString*)getTimeStringFromSliderValue:(int)sliderValue {
     int hours = sliderValue / 60;
     int minutes = sliderValue % 60;
@@ -231,35 +247,31 @@
     return [NSString stringWithFormat:@"%02i:%02i", hours, minutes];
 }
 
-- (void)checkIfAllRequiredFieldsEntered {
+- (void)isAllRequiredFieldsEntered {
     if (!self.isDatePicked) {
-        [self presentAlertWithTitle:@"ERROR!" message:@"Please, choose date of party!" needPopToRoot:NO];
-        [self moveFocusCircleOnY:27.6];
+        [self presentAlertWithTitle:@"ERROR!" message:@"Please, choose date of party!"];
+        [self moveFocusCircleOnOyPosition:self.buttonChooseDay.center.y];
     } else if (!self.isNamePicked) {
-        [self presentAlertWithTitle:@"ERROR!" message:@"Please, enter the party name!" needPopToRoot:NO];
-        [self moveFocusCircleOnY:76];
+        [self presentAlertWithTitle:@"ERROR!" message:@"Please, enter the party name!"];
+        [self moveFocusCircleOnOyPosition:self.textField.center.y];
     } else {
-        [self presentAlertWithTitle:@"SUCCESS!" message:@"New party successfully created!" needPopToRoot:YES];
-        [self moveFocusCircleOnY:477];
+        [self saveThePartyToUserDefaults];
+        [self performSegueWithIdentifier:@"pushSegueToSaveParty" sender:self];
     }
     
 }
 
-- (void)presentAlertWithTitle:(NSString *)title message:(NSString *)message needPopToRoot:(BOOL)needPopToRoot {
-    __block __weak XibViewController *weakSelf = self;
+- (void)presentAlertWithTitle:(NSString *)title message:(NSString *)message {
     __block UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        if (needPopToRoot) {
-            [weakSelf.navigationController popToRootViewControllerAnimated:YES];
-        }
     }];
     
     [alertController addAction:okAction];
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
-- (void) moveFocusCircleOnY: (NSInteger) y {
+- (void) moveFocusCircleOnOyPosition: (NSInteger) y {
     [UIView animateWithDuration:0.5f animations:^{
         [self.movableCircle setFrame:CGRectMake(self.movableCircle.frame.origin.x, y - 7, self.movableCircle.frame.size.height, self.movableCircle.frame.size.width)];
     }];

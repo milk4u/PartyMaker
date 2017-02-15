@@ -6,9 +6,9 @@
 //  Copyright © 2017 Intern01. All rights reserved.
 //
 
-#import "UIColor+Utilty.h"
+#import "UIColor+CustomColors.h"
 
-@implementation UIColor (Utilty)
+@implementation UIColor (CustomColors)
 
 + (UIColor*)dateButtonColor {
     return [[UIColor alloc] initWithRed:239/255.f green:177/255.f blue:27/255.f alpha:1];

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor (Utilty)
+@interface UIColor (CustomColors)
 
 + (UIColor*)dateButtonColor;
 
