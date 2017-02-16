@@ -25,7 +25,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#warning does not update table view information
 - (IBAction)onHomeBarButtonTap:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
     //[self performSegueWithIdentifier:@"modalSegueToHome" sender:self];
