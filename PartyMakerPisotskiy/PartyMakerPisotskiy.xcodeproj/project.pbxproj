@@ -26,6 +26,7 @@
 		B26FBA5E1E53B8D7000BDC53 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B26FBA5D1E53B8D7000BDC53 /* LoginViewController.m */; };
 		B26FBA611E53C4E8000BDC53 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = B26FBA601E53C4E8000BDC53 /* plus.png */; };
 		B26FBA661E53D209000BDC53 /* SaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B26FBA651E53D209000BDC53 /* SaveViewController.m */; };
+		B26FBA6B1E56A5D0000BDC53 /* PartyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B26FBA6A1E56A5D0000BDC53 /* PartyInfoViewController.m */; };
 		B29108591E4C7C14009238C1 /* CreatePartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29108581E4C7C14009238C1 /* CreatePartyViewController.m */; };
 		B2D29BE61E409CD900A999EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D29BE51E409CD900A999EA /* main.m */; };
 		B2D29BE91E409CD900A999EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D29BE81E409CD900A999EA /* AppDelegate.m */; };
@@ -59,6 +60,8 @@
 		B26FBA601E53C4E8000BDC53 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		B26FBA641E53D209000BDC53 /* SaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveViewController.h; sourceTree = "<group>"; };
 		B26FBA651E53D209000BDC53 /* SaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveViewController.m; sourceTree = "<group>"; };
+		B26FBA691E56A5D0000BDC53 /* PartyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartyInfoViewController.h; sourceTree = "<group>"; };
+		B26FBA6A1E56A5D0000BDC53 /* PartyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyInfoViewController.m; sourceTree = "<group>"; };
 		B29108571E4C7C14009238C1 /* CreatePartyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePartyViewController.h; sourceTree = "<group>"; };
 		B29108581E4C7C14009238C1 /* CreatePartyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePartyViewController.m; sourceTree = "<group>"; };
 		B2D29BE11E409CD900A999EA /* PartyMakerPisotskiy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyMakerPisotskiy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,10 +109,9 @@
 		B26FBA5B1E53B7A2000BDC53 /* UIViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B29108581E4C7C14009238C1 /* CreatePartyViewController.m */,
-				B29108571E4C7C14009238C1 /* CreatePartyViewController.h */,
-				B26FBA5C1E53B8D7000BDC53 /* LoginViewController.h */,
-				B26FBA5D1E53B8D7000BDC53 /* LoginViewController.m */,
+				B26FBA6C1E56A5D7000BDC53 /* PartyInfo Screen */,
+				B26FBA681E56A5A5000BDC53 /* Login Screen */,
+				B26FBA671E56A581000BDC53 /* CreateParty Screen */,
 				B26FBA641E53D209000BDC53 /* SaveViewController.h */,
 				B26FBA651E53D209000BDC53 /* SaveViewController.m */,
 			);
@@ -125,6 +127,33 @@
 				B230A1341E5124CC00763633 /* PartyTableViewCell.m */,
 			);
 			name = TableView;
+			sourceTree = "<group>";
+		};
+		B26FBA671E56A581000BDC53 /* CreateParty Screen */ = {
+			isa = PBXGroup;
+			children = (
+				B29108571E4C7C14009238C1 /* CreatePartyViewController.h */,
+				B29108581E4C7C14009238C1 /* CreatePartyViewController.m */,
+			);
+			name = "CreateParty Screen";
+			sourceTree = "<group>";
+		};
+		B26FBA681E56A5A5000BDC53 /* Login Screen */ = {
+			isa = PBXGroup;
+			children = (
+				B26FBA5C1E53B8D7000BDC53 /* LoginViewController.h */,
+				B26FBA5D1E53B8D7000BDC53 /* LoginViewController.m */,
+			);
+			name = "Login Screen";
+			sourceTree = "<group>";
+		};
+		B26FBA6C1E56A5D7000BDC53 /* PartyInfo Screen */ = {
+			isa = PBXGroup;
+			children = (
+				B26FBA691E56A5D0000BDC53 /* PartyInfoViewController.h */,
+				B26FBA6A1E56A5D0000BDC53 /* PartyInfoViewController.m */,
+			);
+			name = "PartyInfo Screen";
 			sourceTree = "<group>";
 		};
 		B2D29BD81E409CD900A999EA = {
@@ -262,6 +291,7 @@
 				B29108591E4C7C14009238C1 /* CreatePartyViewController.m in Sources */,
 				B2D29BE61E409CD900A999EA /* main.m in Sources */,
 				B268E6651E51077E006E1328 /* Party.m in Sources */,
+				B26FBA6B1E56A5D0000BDC53 /* PartyInfoViewController.m in Sources */,
 				B26FBA661E53D209000BDC53 /* SaveViewController.m in Sources */,
 				B230A1381E5131A400763633 /* PartyTableViewController.m in Sources */,
 				B230A1351E5124CC00763633 /* PartyTableViewCell.m in Sources */,

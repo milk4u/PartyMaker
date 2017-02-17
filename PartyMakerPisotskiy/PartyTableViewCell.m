@@ -26,7 +26,7 @@
     [super setSelected:selected animated:animated];
 }
 
-- (void)configureCellWithPartyName:(NSString*)name date:(NSDate*)date timeOfStart:(NSString*)timeStart timeOfEnd:(NSString*)timeEnd andNumberOfLgog:(NSInteger)number {
+- (void)configureCellWithPartyName:(NSString*)name date:(NSDate*)date timeOfStart:(NSString*)timeStart timeOfEnd:(NSString*)timeEnd andNumberOfLogo:(NSInteger)number {
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd.MM.yyyy"];

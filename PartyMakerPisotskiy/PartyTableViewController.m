@@ -45,7 +45,7 @@
     
     Party *party = [[Party deserializePartyList] objectAtIndex:indexPath.row];
     
-    [cell configureCellWithPartyName:(NSString*)party.name date:(NSDate*)party.date timeOfStart:(NSString*)party.timeStart timeOfEnd:(NSString*)party.timeEnd andNumberOfLgog:(NSInteger)party.logoNumber];
+    [cell configureCellWithPartyName:(NSString*)party.name date:(NSDate*)party.date timeOfStart:(NSString*)party.timeStart timeOfEnd:(NSString*)party.timeEnd andNumberOfLogo:(NSInteger)party.logoNumber];
     
     return cell;
 }
@@ -60,7 +60,22 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return self.view.frame.size.height / 10;
+    return self.view.frame.size.height / 8;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSInteger selectedRow = indexPath.row;
+    NSLog(@"touch on row %ld", selectedRow);
+
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"MySegueIdentifier"]) {
+        
+    }
 }
 
 @end
