@@ -7,10 +7,12 @@
 //
 
 #import "PartyTableViewController.h"
+#import "PartyInfoViewController.h"
 
 @interface PartyTableViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewPartyList;
+@property NSIndexPath *indexPath;
 
 @end
 
@@ -45,7 +47,7 @@
     
     Party *party = [[Party deserializePartyList] objectAtIndex:indexPath.row];
     
-    [cell configureCellWithPartyName:(NSString*)party.name date:(NSDate*)party.date timeOfStart:(NSString*)party.timeStart timeOfEnd:(NSString*)party.timeEnd andNumberOfLogo:(NSInteger)party.logoNumber];
+    [cell configureCellWithParty:party];
     
     return cell;
 }
@@ -63,18 +65,23 @@
     return self.view.frame.size.height / 8;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    NSInteger selectedRow = indexPath.row;
-    NSLog(@"touch on row %ld", selectedRow);
-
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    
+//    //[self performSegueWithIdentifier:@"PartyInfoSegue" sender:self];
+//    
+//    self.indexPath = indexPath;
+//    NSLog(@"touch on row %ld", self.indexPath.row);
+//
+//}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"MySegueIdentifier"]) {
+    if ([[segue identifier] isEqualToString:@"PartyInfoSegue"]) {
+        PartyInfoViewController *partyInfoViewController = [segue destinationViewController];
         
+        PartyTableViewCell *cell = (PartyTableViewCell*) sender;
+        partyInfoViewController.party = cell.party;
     }
 }
 

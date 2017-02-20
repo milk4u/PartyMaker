@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 @property (weak, nonatomic) IBOutlet UILabel *labelDateAndTime;
 
+
 @end
 
 @implementation PartyTableViewCell
@@ -26,15 +27,19 @@
     [super setSelected:selected animated:animated];
 }
 
-- (void)configureCellWithPartyName:(NSString*)name date:(NSDate*)date timeOfStart:(NSString*)timeStart timeOfEnd:(NSString*)timeEnd andNumberOfLogo:(NSInteger)number {
+- (void)configureCellWithParty:(Party*)party {
+    
+    self.party = party;
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd.MM.yyyy"];
-    NSString *stringFromDate = [formatter stringFromDate:date];
+    NSString *stringFromDate = [formatter stringFromDate:party.date];
     
-    self.labelName.text = name;
-    self.labelDateAndTime.text = [NSString stringWithFormat:@"Date: %@ %@ - %@", stringFromDate, timeStart, timeEnd];
-    self.imageLogo.image = [UIImage imageNamed:[[Party getImageNamesFromArray] objectAtIndex:number]];
+    self.labelName.text = party.name;
+    self.labelDateAndTime.text = [NSString stringWithFormat:@"Date: %@ %@ - %@", stringFromDate, party.timeStart, party.timeEnd];
+    self.imageLogo.image = [UIImage imageNamed:[[Party getImageNamesFromArray] objectAtIndex:party.logoNumber]];
+    
+    
 }
 
 - (void)prepareForReuse {
@@ -43,6 +48,7 @@
     self.labelDateAndTime.text = nil;
     self.labelName.text = nil;
     self.imageLogo.image = nil;
+    self.party = nil;
 }
 
 + (NSString*)reuseIdentifier {

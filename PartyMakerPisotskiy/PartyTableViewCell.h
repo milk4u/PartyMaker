@@ -11,7 +11,9 @@
 
 @interface PartyTableViewCell : UITableViewCell
 
-- (void)configureCellWithPartyName:(NSString*)name date:(NSDate*)date timeOfStart:(NSString*)timeStart timeOfEnd:(NSString*)timeEnd andNumberOfLogo:(NSInteger)number;
+@property Party *party;
+
+- (void)configureCellWithParty:(Party*)party;
 + (NSString*)reuseIdentifier;
 
 @end

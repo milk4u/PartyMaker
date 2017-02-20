@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9796FC541E59EF7D00AAE832 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9796FC521E59EF7D00AAE832 /* Main.storyboard */; };
 		B230A1351E5124CC00763633 /* PartyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B230A1341E5124CC00763633 /* PartyTableViewCell.m */; };
 		B230A1381E5131A400763633 /* PartyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B230A1371E5131A400763633 /* PartyTableViewController.m */; };
 		B268E6581E50F074006E1328 /* Birthday Cake.png in Resources */ = {isa = PBXBuildFile; fileRef = B268E64F1E50F074006E1328 /* Birthday Cake.png */; };
@@ -22,12 +23,13 @@
 		B26FBA4F1E5265BD000BDC53 /* Beer.png in Resources */ = {isa = PBXBuildFile; fileRef = B26FBA4E1E5265BD000BDC53 /* Beer.png */; };
 		B26FBA511E5324D5000BDC53 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = B26FBA501E5324D5000BDC53 /* background.png */; };
 		B26FBA531E53260F000BDC53 /* LAUNCH.png in Resources */ = {isa = PBXBuildFile; fileRef = B26FBA521E53260F000BDC53 /* LAUNCH.png */; };
-		B26FBA5A1E53B6C1000BDC53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B26FBA581E53B6C1000BDC53 /* Main.storyboard */; };
 		B26FBA5E1E53B8D7000BDC53 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B26FBA5D1E53B8D7000BDC53 /* LoginViewController.m */; };
 		B26FBA611E53C4E8000BDC53 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = B26FBA601E53C4E8000BDC53 /* plus.png */; };
 		B26FBA661E53D209000BDC53 /* SaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B26FBA651E53D209000BDC53 /* SaveViewController.m */; };
 		B26FBA6B1E56A5D0000BDC53 /* PartyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B26FBA6A1E56A5D0000BDC53 /* PartyInfoViewController.m */; };
 		B29108591E4C7C14009238C1 /* CreatePartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29108581E4C7C14009238C1 /* CreatePartyViewController.m */; };
+		B298C8F51E5B06BE0066A06C /* PartyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B298C8F31E5B06BE0066A06C /* PartyModel.xcdatamodeld */; };
+		B298C9221E5B1B780066A06C /* CoreDataCode in Resources */ = {isa = PBXBuildFile; fileRef = B298C9211E5B1B780066A06C /* CoreDataCode */; };
 		B2D29BE61E409CD900A999EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D29BE51E409CD900A999EA /* main.m */; };
 		B2D29BE91E409CD900A999EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D29BE81E409CD900A999EA /* AppDelegate.m */; };
 		B2D29BF11E409CD900A999EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2D29BF01E409CD900A999EA /* Assets.xcassets */; };
@@ -36,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9796FC531E59EF7D00AAE832 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B230A1331E5124CC00763633 /* PartyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartyTableViewCell.h; sourceTree = "<group>"; };
 		B230A1341E5124CC00763633 /* PartyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyTableViewCell.m; sourceTree = "<group>"; };
 		B230A1361E5131A400763633 /* PartyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartyTableViewController.h; sourceTree = "<group>"; };
@@ -54,7 +57,6 @@
 		B26FBA4E1E5265BD000BDC53 /* Beer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Beer.png; path = images/Beer.png; sourceTree = "<group>"; };
 		B26FBA501E5324D5000BDC53 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = images/background.png; sourceTree = "<group>"; };
 		B26FBA521E53260F000BDC53 /* LAUNCH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LAUNCH.png; sourceTree = "<group>"; };
-		B26FBA591E53B6C1000BDC53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B26FBA5C1E53B8D7000BDC53 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		B26FBA5D1E53B8D7000BDC53 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B26FBA601E53C4E8000BDC53 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
@@ -64,6 +66,8 @@
 		B26FBA6A1E56A5D0000BDC53 /* PartyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyInfoViewController.m; sourceTree = "<group>"; };
 		B29108571E4C7C14009238C1 /* CreatePartyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePartyViewController.h; sourceTree = "<group>"; };
 		B29108581E4C7C14009238C1 /* CreatePartyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePartyViewController.m; sourceTree = "<group>"; };
+		B298C8F41E5B06BE0066A06C /* PartyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PartyModel.xcdatamodel; sourceTree = "<group>"; };
+		B298C9211E5B1B780066A06C /* CoreDataCode */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CoreDataCode; sourceTree = "<group>"; };
 		B2D29BE11E409CD900A999EA /* PartyMakerPisotskiy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyMakerPisotskiy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D29BE51E409CD900A999EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2D29BE71E409CD900A999EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 		B2D29BD81E409CD900A999EA = {
 			isa = PBXGroup;
 			children = (
+				B298C9211E5B1B780066A06C /* CoreDataCode */,
+				B298C8F31E5B06BE0066A06C /* PartyModel.xcdatamodeld */,
 				B26FBA5F1E53C237000BDC53 /* TableView */,
 				B26FBA5B1E53B7A2000BDC53 /* UIViewControllers */,
 				B268E6631E51077E006E1328 /* Party.h */,
@@ -180,9 +186,9 @@
 		B2D29BE31E409CD900A999EA /* PartyMakerPisotskiy */ = {
 			isa = PBXGroup;
 			children = (
-				B26FBA581E53B6C1000BDC53 /* Main.storyboard */,
 				B2D29BE71E409CD900A999EA /* AppDelegate.h */,
 				B2D29BE81E409CD900A999EA /* AppDelegate.m */,
+				9796FC521E59EF7D00AAE832 /* Main.storyboard */,
 				B2D29BF01E409CD900A999EA /* Assets.xcassets */,
 				B2D29BF21E409CD900A999EA /* LaunchScreen.storyboard */,
 				B2D29BF51E409CD900A999EA /* Info.plist */,
@@ -271,8 +277,9 @@
 				B26FBA531E53260F000BDC53 /* LAUNCH.png in Resources */,
 				B268E65F1E50F074006E1328 /* No Alcohol.png in Resources */,
 				B268E6581E50F074006E1328 /* Birthday Cake.png in Resources */,
+				B298C9221E5B1B780066A06C /* CoreDataCode in Resources */,
+				9796FC541E59EF7D00AAE832 /* Main.storyboard in Resources */,
 				B26FBA511E5324D5000BDC53 /* background.png in Resources */,
-				B26FBA5A1E53B6C1000BDC53 /* Main.storyboard in Resources */,
 				B268E65A1E50F074006E1328 /* Christmas Tree.png in Resources */,
 				B268E65E1E50F074006E1328 /* menu-icon.png in Resources */,
 				B268E6601E50F074006E1328 /* rightSliderImg.png in Resources */,
@@ -295,6 +302,7 @@
 				B26FBA661E53D209000BDC53 /* SaveViewController.m in Sources */,
 				B230A1381E5131A400763633 /* PartyTableViewController.m in Sources */,
 				B230A1351E5124CC00763633 /* PartyTableViewCell.m in Sources */,
+				B298C8F51E5B06BE0066A06C /* PartyModel.xcdatamodeld in Sources */,
 				B2D29C001E410C6200A999EA /* UIColor+CustomColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,10 +310,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B26FBA581E53B6C1000BDC53 /* Main.storyboard */ = {
+		9796FC521E59EF7D00AAE832 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B26FBA591E53B6C1000BDC53 /* Base */,
+				9796FC531E59EF7D00AAE832 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -460,6 +468,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B298C8F31E5B06BE0066A06C /* PartyModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B298C8F41E5B06BE0066A06C /* PartyModel.xcdatamodel */,
+			);
+			currentVersion = B298C8F41E5B06BE0066A06C /* PartyModel.xcdatamodel */;
+			path = PartyModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B2D29BD91E409CD900A999EA /* Project object */;
 }
