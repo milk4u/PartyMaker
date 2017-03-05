@@ -1,10 +1,3 @@
-//
-//  PMRParty.m
-//  PartyMaker
-//
-//  Copyright © 2017 Softheme. All rights reserved.
-//
-
 #import "PMRParty.h"
 #import <objc/runtime.h>
 

@@ -1,10 +1,3 @@
-//
-//  PMRCoreDataManager+Party.m
-//  PartyMaker
-//
-//  Copyright © 2017 Softheme. All rights reserved.
-//
-
 #import "PMRCoreDataManager+Party.h"
 #import "PMRPartyManagedObject+CoreDataClass.h"
 #import "PMRParty.h"

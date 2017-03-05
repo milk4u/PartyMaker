@@ -1,10 +1,3 @@
-//
-//  PMRCoreDataManager.h
-//  PartyMaker
-//
-//  Copyright © 2017 Softheme. All rights reserved.
-//
-
 @class NSManagedObjectID;
 @class NSManagedObjectContext;
 @class NSPersistentStoreCoordinator;

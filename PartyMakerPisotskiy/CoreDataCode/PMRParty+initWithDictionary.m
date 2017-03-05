@@ -1,10 +1,3 @@
-//
-//  PMRParty+initWithDictionary.m
-//  PartyMaker
-//
-//  Copyright © 2017 Softheme. All rights reserved.
-//
-
 #import "PMRParty+initWithDictionary.h"
 
 @implementation PMRParty (initWithDictionary)

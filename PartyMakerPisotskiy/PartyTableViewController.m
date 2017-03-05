@@ -1,11 +1,3 @@
-//
-//  PartyTableViewController.m
-//  PartyMakerPisotskiy
-//
-//  Created by Intern01 on 2/13/17.
-//  Copyright © 2017 Intern01. All rights reserved.
-//
-
 #import "PartyTableViewController.h"
 #import "PartyInfoViewController.h"
 
@@ -64,16 +56,6 @@
 {
     return self.view.frame.size.height / 8;
 }
-
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    
-//    //[self performSegueWithIdentifier:@"PartyInfoSegue" sender:self];
-//    
-//    self.indexPath = indexPath;
-//    NSLog(@"touch on row %ld", self.indexPath.row);
-//
-//}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

@@ -1,11 +1,3 @@
-//
-//  PartyInfoViewController.m
-//  PartyMakerPisotskiy
-//
-//  Created by Intern01 on 2/17/17.
-//  Copyright © 2017 Intern01. All rights reserved.
-//
-
 #import "PartyInfoViewController.h"
 
 @interface PartyInfoViewController ()
@@ -35,17 +27,19 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
-    [self setUpImage];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self setUpLabels];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+-(void)viewWillLayoutSubviews {
+	[self setUpImage];
 }
 
 //labels setup

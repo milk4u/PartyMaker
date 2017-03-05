@@ -1,12 +1,4 @@
-//
-//  PMRPartyManagedObject+CoreDataClass.h
-//  
-//
-//  Created by Intern01 on 2/20/17.
-//
-//
-
-#import <Foundation/Foundation.h>
+import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
 NS_ASSUME_NONNULL_BEGIN

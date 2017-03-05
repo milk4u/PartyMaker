@@ -1,11 +1,3 @@
-//
-//  PMRPartyManagedObject+CoreDataClass.m
-//  
-//
-//  Created by Intern01 on 2/20/17.
-//
-//
-
 #import "PMRPartyManagedObject+CoreDataClass.h"
 
 @implementation PMRPartyManagedObject

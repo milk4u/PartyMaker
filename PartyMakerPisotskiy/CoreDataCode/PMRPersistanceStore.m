@@ -1,10 +1,3 @@
-//
-//  PMRPersistanceStore.m
-//  PartyMaker
-//
-//  Copyright © 2017 Softheme. All rights reserved.
-//
-
 #import "PMRPersistanceStore.h"
 //#import "PMRSettings.h"
 //#import "PMRUserDefaultsStore.h"

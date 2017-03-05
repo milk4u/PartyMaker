@@ -1,10 +1,3 @@
-//
-//  PMRParty+_initWithManagedObject.m
-//  PartyMaker
-//
-//  Copyright © 2017 Softheme. All rights reserved.
-//
-
 #import "PMRParty+initWithManagedObject.h"
 #import "PMRPartyManagedObject+CoreDataClass.h"
 
